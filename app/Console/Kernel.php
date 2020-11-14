@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('dooball:sync-match')->everyFiveMinutes();
+        $schedule->command('dooball:sync-match')->everyMinute();
         $schedule->command('dooball:sync-db')->everyMinute();
         // $schedule->command('dooball:arrange-ffp-main')->everyFiveMinutes();
         $schedule->command('dooball:delete-ffp-db')->everyTenMinutes();
