@@ -85,6 +85,9 @@ class WelcomeController extends Controller
             $widget = $this->widget->widgetData();
             $matches = $this->welcome->matchDatas();
             $social = $this->widget->socialData();
+
+            dd($matches);
+            
         } else {
             $stringRealMatches = file_get_contents(env('SCRAP_LINK'));
 
@@ -93,7 +96,7 @@ class WelcomeController extends Controller
             }
         }
 
-        dd($matches);
+        
 
         $respDatas = array(
             'pages' => $pageList,
