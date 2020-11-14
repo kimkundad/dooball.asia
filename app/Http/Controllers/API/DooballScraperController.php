@@ -150,7 +150,9 @@ class DooballScraperController extends Controller
 
     public function scraperBallzaaArray()
     {   
-        $url = "http://milktopcow.com/get-ballzaa.php";
+
+        
+       /* $url = "http://milktopcow.com/get-ballzaa.php";
         $ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -163,7 +165,7 @@ class DooballScraperController extends Controller
         $data = curl_exec($ch);
         curl_close($ch);
         
-        return response()->json($data);
+        return response()->json($data); */
 
         $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
