@@ -9,6 +9,7 @@ use App\Models\MatchLink;
 use App\Models\Link;
 use Illuminate\Support\Facades\DB;
 use Sunra\PhpSimple\HtmlDomParser;
+use Response;
 
 // use Illuminate\Support\Facades\Log;
 
@@ -158,7 +159,7 @@ class DooballScraperController extends Controller
         $data = curl_exec($ch);
         curl_close($ch);
         
-        return Response::json($data);
+        return response()->json($data);
 
         $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
