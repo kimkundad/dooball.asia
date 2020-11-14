@@ -85,11 +85,13 @@ class WelcomeController extends Controller
 
         // --- start new algorithm --- //
 		$mid_this_date = Date('Y-m-d 11:00:00');
-		$ten_tomorrow_date = Date('Y-m-d 10:00:00', strtotime("+1 days"));
+        $ten_tomorrow_date = Date('Y-m-d 10:00:00', strtotime("+1 days"));
+        //dd($ten_tomorrow_date);
 
 		if (strtotime(date("Y-m-d H:i:s")) < strtotime(date("Y-m-d 10:00:00"))) {
 			$mid_this_date = Date('Y-m-d 12:00:00', strtotime("-1 days"));
-			$ten_tomorrow_date = Date('Y-m-d 10:00:00');
+            $ten_tomorrow_date = Date('Y-m-d 10:00:00');
+            
 		} else {
             $mid_this_date = Date('Y-m-d H:i:s', strtotime("-150 minutes"));
         }
@@ -99,10 +101,11 @@ class WelcomeController extends Controller
         $matches = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date])
                     ->where('match_time', '>', $formatted_date)
                     ->orderBy('match_time', 'asc');
+        //dd($matches);
 
         $total = $matches->count();
         // $q = DB::getQueryLog()[0]['query'];
-        // dd($q);
+         dd($total);
 
         if ($total > 0) {
             $matchDatas = $matches->get();
