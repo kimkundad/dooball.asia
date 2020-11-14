@@ -146,15 +146,18 @@ class DooballScraperController extends Controller
     }
 
     public function scraperBallzaaArray()
-    {
-        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
+    {   
         
+        
+
+
+        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $matches, $raws);
+        
     
         $datas = $raws[1];
-       // dd($datas);
         $arr = explode('class="link_rows open-close"', $datas);
-        
+        dd($arr);
         
     
         $last_ele = end($arr);
