@@ -93,6 +93,8 @@ class WelcomeController extends Controller
             }
         }
 
+        dd($matches);
+
         $respDatas = array(
             'pages' => $pageList,
             'website_robot' => $website_robot,
