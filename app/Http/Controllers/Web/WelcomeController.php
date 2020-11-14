@@ -86,8 +86,8 @@ class WelcomeController extends Controller
             $matches = $this->welcome->matchDatas();
             $social = $this->widget->socialData();
 
-            dd($matches);
-            
+           // dd($matches);
+
         } else {
             $stringRealMatches = file_get_contents(env('SCRAP_LINK'));
 

@@ -105,7 +105,7 @@ class WelcomeController extends Controller
 
         $total = $matches->count();
         // $q = DB::getQueryLog()[0]['query'];
-         dd($total);
+        // dd($total);
 
         if ($total > 0) {
             $matchDatas = $matches->get();

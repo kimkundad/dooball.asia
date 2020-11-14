@@ -16,6 +16,10 @@ if (env('APP_ENV') === 'production') {
 }
 
 // Route::resource('/', 'Web\WelcomeController');
+
+
+Route::get('/kim_test', 'API\DooballScraperController@scraperBallzaaArray')->name('scraperBallzaaArray');
+
 Route::get('/', 'Web\WelcomeController@index')->name('index');
 Route::get('/blog', 'Web\ArticleController@articleList');
 Route::get('/tags/{tag_name}', 'Web\ArticleController@articleTag');
