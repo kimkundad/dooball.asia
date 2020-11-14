@@ -159,7 +159,7 @@ class DooballScraperController extends Controller
         curl_close($ch);
         //dd($data);
         
-         dd($data);
+         dd('555');
 
         //$matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
