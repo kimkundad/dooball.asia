@@ -9,7 +9,6 @@ use App\Models\MatchLink;
 use App\Models\Link;
 use Illuminate\Support\Facades\DB;
 use Sunra\PhpSimple\HtmlDomParser;
-use Ixudra\Curl\Facades\Curl;
 
 // use Illuminate\Support\Facades\Log;
 
@@ -151,19 +150,15 @@ class DooballScraperController extends Controller
     public function scraperBallzaaArray()
     {   
         
-        
-        $response = Curl::to('https://jsonplaceholder.typicode.com/users/1')->get();
-        //dd($data);
-        
-        dd($response);
+    
 
-        //$matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
+        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
         
     
         $datas = $raws[1];
         $arr = explode('class="link_rows open-close"', $datas);
-       // dd($arr);
+        dd($arr);
         
     
         $last_ele = end($arr);
