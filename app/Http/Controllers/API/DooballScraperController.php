@@ -149,8 +149,11 @@ class DooballScraperController extends Controller
 
     public function scraperBallzaaArray()
     {   
+        $jsonurl = "http://milktopcow.com/get-ballzaa.php";
+        $json = file_get_contents($jsonurl);
+        $bitcoin = json_decode($json);
         
-    
+        return $bitcoin;
 
         $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
