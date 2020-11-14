@@ -149,9 +149,15 @@ class DooballScraperController extends Controller
     {   
         
         
+        $context1 = stream_context_create(
+            array(
+                "http" => array(
+                    "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+                )
+            )
+        );
 
-
-        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
+        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php', false, $context1);
         preg_match("'<body>(.*?)</body>'si", $matches, $raws);
         
     
