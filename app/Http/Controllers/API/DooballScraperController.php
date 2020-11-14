@@ -147,7 +147,7 @@ class DooballScraperController extends Controller
 
     public function scraperBallzaaArray()
     {
-        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
+       // $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         $curl_handle=curl_init();
         curl_setopt($curl_handle, CURLOPT_URL,'https://www.ballzaa.com/linkdooball.php');
         curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
