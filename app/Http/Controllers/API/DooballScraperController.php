@@ -158,7 +158,7 @@ class DooballScraperController extends Controller
         $data = curl_exec($ch);
         curl_close($ch);
         
-        return $data;
+        return Response::json($data);
 
         $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
         preg_match("'<body>(.*?)</body>'si", $data, $raws);
