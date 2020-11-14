@@ -9,6 +9,7 @@ use App\Models\MatchLink;
 use App\Models\Link;
 use Illuminate\Support\Facades\DB;
 use Sunra\PhpSimple\HtmlDomParser;
+use Ixudra\Curl\Facades\Curl;
 // use Illuminate\Support\Facades\Log;
 
 class DooballScraperController extends Controller
