@@ -149,7 +149,7 @@ class DooballScraperController extends Controller
 
     public function scraperBallzaaArray()
     {   
-        $jsonurl = "http://milktopcow.com/get-ballzaa.php";
+        $jsonurl = "milktopcow.com/get-ballzaa.php";
         $json = file_get_contents($jsonurl);
         $bitcoin = json_decode($json);
         
