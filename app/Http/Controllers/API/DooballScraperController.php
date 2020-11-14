@@ -8,6 +8,7 @@ use App\Models\Match;
 use App\Models\MatchLink;
 use App\Models\Link;
 use Illuminate\Support\Facades\DB;
+use Sunra\PhpSimple\HtmlDomParser;
 // use Illuminate\Support\Facades\Log;
 
 class DooballScraperController extends Controller
@@ -149,21 +150,24 @@ class DooballScraperController extends Controller
     {   
         
         
-        $context1 = stream_context_create(
-            array(
-                "http" => array(
-                    "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
-                )
-            )
-        );
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch,CURLOPT_URL,"https://www.ballzaa.com/linkdooball.php");
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13");
+        $data = curl_exec($ch);
+        curl_close($ch);
+        //dd($data);
+        
+         dd($data);
 
-        $matches = file_get_contents('https://www.ballzaa.com/linkdooball.php', false, $context1);
-        preg_match("'<body>(.*?)</body>'si", $matches, $raws);
+        //$matches = file_get_contents('https://www.ballzaa.com/linkdooball.php');
+        preg_match("'<body>(.*?)</body>'si", $data, $raws);
         
     
         $datas = $raws[1];
         $arr = explode('class="link_rows open-close"', $datas);
-        dd($arr);
+       // dd($arr);
         
     
         $last_ele = end($arr);
