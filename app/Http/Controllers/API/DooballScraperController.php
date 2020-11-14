@@ -151,7 +151,7 @@ class DooballScraperController extends Controller
         preg_match("'<body>(.*?)</body>'si", $matches, $raws);
     
         $datas = $raws[1];
-        $arr = explode('<div class="link_rows open-close">', $datas);
+        $arr = explode('class="link_rows open-close"', $datas);
     
         $last_ele = end($arr);
         array_shift($arr);
