@@ -150,7 +150,7 @@ class DooballScraperController extends Controller
 
     public function scraperBallzaaArray()
     {   
-        $url = "milktopcow.com/get-ballzaa.php";
+        $url = "http://milktopcow.com/get-ballzaa.php";
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
