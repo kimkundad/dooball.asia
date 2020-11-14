@@ -173,7 +173,7 @@ class DooballScraperController extends Controller
     
         $datas = $raws[1];
         $arr = explode('class="link_rows open-close"', $datas);
-        dd($arr);
+      //  dd($arr);
         
     
         $last_ele = end($arr);
