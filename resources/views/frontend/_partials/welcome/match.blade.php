@@ -43,12 +43,15 @@
     cursor: pointer;
     background: #fff;
   }
+  .my_text_w{
+    color: #fff;
+  }
 </style>
 <div class="match-over">
     @if($matches)
         @if($matches['total'] != 0)
             <div class="db-collapse ">
-                <div class="db-match match-0">
+                <div class="my_text_w db-match match-0">
                     <span class="match-time1">วันเวลา</span>
                     <span class="home-team1">ทีมเหย้า</span>
                     <span class="vs1">Vs</span>
