@@ -25,6 +25,9 @@
     color: #fff;
     padding-right: 15px;
 }
+.text-r{
+  text-align: right;
+}
 </style>
 <div class="match-over">
     @if($matches)
