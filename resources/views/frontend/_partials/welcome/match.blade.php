@@ -24,6 +24,13 @@
     background: #d21d29;
     color: #fff;
     padding-right: 15px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+.border_match{
+  border-right: 1px solid #7b030b;
+    border-bottom: 1px solid #7b030b;
+    border-left: 1px solid #7b030b;
 }
 .text-r{
   text-align: right;
@@ -32,7 +39,7 @@
 <div class="match-over">
     @if($matches)
         @if($matches['total'] != 0)
-            <div class="db-collapse">
+            <div class="db-collapse border_match">
                 <div class="db-match match-0">
                     <span class="match-time new_my_time">วันเวลา</span>
                     <span class="home-team">ทีมเหย้า</span>
