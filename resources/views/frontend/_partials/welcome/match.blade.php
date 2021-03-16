@@ -35,6 +35,14 @@
 .text-r{
   text-align: right;
 }
+.db-match:not(.match-0):hover {
+    cursor: pointer;
+    background: #fff;
+  }
+  .ffp-outmost .db-match:not(.match-0):hover {
+    cursor: pointer;
+    background: #fff;
+  }
 </style>
 <div class="match-over">
     @if($matches)
