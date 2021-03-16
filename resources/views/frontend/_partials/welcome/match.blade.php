@@ -1,6 +1,8 @@
 <style>
 .db-match {
     padding: 10px 20px;
+    color: #d21d29;
+    background: #ffffff;
 }
 .new_my_time{
   font-size: 26px;
@@ -17,9 +19,11 @@
   font-size: 24px;
 }
 .name_ll{
-  text-align: right;
-  background: #d21d29;
-  color: #fff;
+  height: 25px;
+    text-align: right;
+    background: #d21d29;
+    color: #fff;
+    padding-right: 15px;
 }
 </style>
 <div class="match-over">
@@ -43,7 +47,7 @@
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
-                        <span class="league-name name_ll">{{ $val->match_name }}</span>
+                        <span class="league-name "><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     </div>
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
