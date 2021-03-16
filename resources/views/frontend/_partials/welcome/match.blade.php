@@ -50,7 +50,7 @@
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
-                        <span class="league-name "><strong class="name_ll">{{ $val->match_name }}</strong></span>
+                        <span class="league-name text-r"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     </div>
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
