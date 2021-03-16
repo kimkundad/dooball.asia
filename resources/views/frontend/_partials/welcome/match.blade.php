@@ -5,13 +5,16 @@
 .new_my_time{
   font-size: 32px;
 }
+.day_my{
+  font-size: 20px;
+}
 .match-over .home-team, .match-over .away-team {
     padding-top: 30px;
-    font-size: 26px;
+    font-size: 18px;
 }
 .mv_vs{
   padding-top: 30px;
-  font-size: 26px;
+  font-size: 24px;
 }
 </style>
 <div class="match-over">
@@ -31,7 +34,7 @@
                 <div class="db-collapse">
                     <div class="db-match match-{{ ($k+1) }}">
                         <?php $pieces = explode(",", $val->match_time); ?>
-                        <span class="match-time">{{ $pieces[1] }}</span>
+                        <span class="match-time new_my_time">{{ $pieces[1] }} <br /> <strong class="day_my">{{ $pieces[0] }}</strong></span>
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
