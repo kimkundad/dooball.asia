@@ -30,7 +30,7 @@
             @foreach($matches['records'] as $k => $val)
                 <div class="db-collapse">
                     <div class="db-match match-{{ ($k+1) }}">
-                        <?php $pieces = explode(" ", $val->match_time); ?>
+                        <?php $pieces = explode(",", $val->match_time); ?>
                         <span class="match-time">{{ $pieces[1] }}</span>
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
