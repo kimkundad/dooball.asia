@@ -16,6 +16,11 @@
   padding-top: 30px;
   font-size: 24px;
 }
+.name_ll{
+  text-align: right;
+  background: #d21d29;
+  color: #fff;
+}
 </style>
 <div class="match-over">
     @if($matches)
@@ -38,7 +43,7 @@
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
-                        <span class="league-name">{{ $val->match_name }}</span>
+                        <span class="league-name name_ll">{{ $val->match_name }}</span>
                     </div>
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
