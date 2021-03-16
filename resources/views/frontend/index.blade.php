@@ -90,6 +90,7 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        
 
         var thisHost = $('#http_host').val();
         var apiHost = $('#base_url').val(); // $('#api_host').val();
