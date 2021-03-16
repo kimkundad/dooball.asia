@@ -39,7 +39,7 @@
 <div class="match-over">
     @if($matches)
         @if($matches['total'] != 0)
-            <div class="db-collapse border_match">
+            <div class="db-collapse ">
                 <div class="db-match match-0">
                     <span class="match-time new_my_time">วันเวลา</span>
                     <span class="home-team">ทีมเหย้า</span>
@@ -50,7 +50,7 @@
             </div>
 
             @foreach($matches['records'] as $k => $val)
-                <div class="db-collapse">
+                <div class="db-collapse border_match">
                     <div class="db-match match-{{ ($k+1) }}">
                         <?php $pieces = explode(",", $val->match_time); ?>
                         <span class="match-time new_my_time">{{ $pieces[1] }} <br /> <strong class="day_my">{{ $pieces[0] }}</strong></span>
