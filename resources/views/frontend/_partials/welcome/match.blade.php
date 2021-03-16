@@ -3,13 +3,13 @@
     padding: 10px 20px;
 }
 .new_my_time{
-  font-size: 32px;
+  font-size: 26px;
 }
 .day_my{
-  font-size: 20px;
+  font-size: 18px;
 }
 .match-over .home-team, .match-over .away-team {
-    padding-top: 30px;
+    padding-top: 35px;
     font-size: 18px;
 }
 .mv_vs{
