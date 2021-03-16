@@ -49,11 +49,11 @@
         @if($matches['total'] != 0)
             <div class="db-collapse ">
                 <div class="db-match match-0">
-                    <span class="match-time new_my_time">วันเวลา</span>
-                    <span class="home-team">ทีมเหย้า</span>
-                    <span class="vs">Vs</span>
-                    <span class="away-team">ทีมเยือน</span>
-                    <span class="league-name">ชื่อลีก</span>
+                    <span class="match-time1">วันเวลา</span>
+                    <span class="home-team1">ทีมเหย้า</span>
+                    <span class="vs1">Vs</span>
+                    <span class="away-team1">ทีมเยือน</span>
+                    <span class="league-name1">ชื่อลีก</span>
                 </div>
             </div>
 
