@@ -46,9 +46,15 @@
   .my_text_w{
     color: #fff;
   }
+  .mobile_size{
+    display: none;
+  }
   @media screen and (max-width: 767px) {
     .db-match .league-name{
       width:100%
+    }
+    .mobile_size{
+      display: block;
     }
   }
 </style>
@@ -73,8 +79,9 @@
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
-                        <span class="league-name text-r mobile_size"><strong class="name_ll">{{ $val->match_name }}</strong></span>
+                        <span class="league-name text-r"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     </div>
+                    <span class="league-name text-r mobile_size"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
                             @foreach($val->sponsor_links as $ele)
