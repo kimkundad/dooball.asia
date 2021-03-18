@@ -183,17 +183,16 @@ border-bottom: 1px solid #d21d29
 .my_card{
   background: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
-  padding:15px;
+  padding: 15px;
 }
 </style>
-
+<div class="my_card">
   <div class="row">
-    <div class="my_card">
-    <div class="col-md-6">
-      <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
-    </div>
-    <div class="col-md-6">
-      <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
-    </div>
+      <div class="col-md-6">
+        <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
+      </div>
   </div>
 </div>
