@@ -162,3 +162,13 @@ border-bottom: 1px solid #d21d29
         </div>
     @endif
 </div>
+<div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>ดูบอลสด เลือกดูแยกลีก</h2>
+    </div>
+    <div class="col-md-6">
+      <h2>ลิ้งดูบอลออนไลน์ แยกทีม</h2>
+    </div>
+  </div>
+</div>
