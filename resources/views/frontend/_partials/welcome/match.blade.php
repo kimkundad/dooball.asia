@@ -52,6 +52,9 @@
   .desk_h{
     display: block;
   }
+  .db-content {
+    background: rgb(255 255 255);
+}
   @media screen and (max-width: 767px) {
     .db-match .league-name{
       width:100%
@@ -102,12 +105,20 @@
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
                             @foreach($val->sponsor_links as $ele)
-                                <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
+                            <ul>
+                              <li>
+                                <a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a>
+                              </li>
+                            </ul>
                             @endforeach
                         @endif
                         @if($val->normal_links)
                             @foreach($val->normal_links as $e)
-                                <p><a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a></p>
+                                <ul>
+                                  <li>
+                                    <a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a>
+                                  </li>
+                                </ul>
                             @endforeach
                         @endif
                     </div>
