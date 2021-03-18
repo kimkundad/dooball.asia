@@ -176,7 +176,7 @@ border-bottom: 1px solid #d21d29
         width: 50%;
 }
 </style>
-<div style="background: rgba(255, 255, 255, 0.85);     border-radius: 5px;">
+<div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
   <div class="row">
     <div class="col-md-6">
       <h2>ดูบอลสด เลือกดูแยกลีก</h2>
