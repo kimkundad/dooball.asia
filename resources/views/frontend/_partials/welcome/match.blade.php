@@ -64,6 +64,9 @@
 .l-left{
   text-align: left;
 }
+.dd-padd{
+  padding: 10px;
+}
   @media screen and (max-width: 767px) {
     .db-match .league-name{
       width:100%
@@ -111,7 +114,7 @@
                         <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     </div>
                     <span class="league-name text-r mobile_size"><strong class="name_ll">{{ $val->match_name }}</strong></span>
-                    <div class="db-content content-{{ ($k+1) }}">
+                    <div class="db-content content-{{ ($k+1) }} dd-padd">
                         @if($val->sponsor_links)
                             @foreach($val->sponsor_links as $ele)
                             <ul>
@@ -123,7 +126,7 @@
                         @endif
                         @if($val->normal_links)
                             @foreach($val->normal_links as $e)
-                                <ul>
+                                <ul>ลิงค์ดูบอล
                                   <li class="l-left">
                                     <a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a>
                                   </li>
