@@ -67,6 +67,10 @@
 .dd-padd{
   padding: 10px;
 }
+.h_line_link{
+  font-size: 15px;
+  font-weight: 600;
+}
   @media screen and (max-width: 767px) {
     .db-match .league-name{
       width:100%
@@ -126,7 +130,7 @@
                             @endforeach
                         @endif
                         </ul>
-                        <ul>ลิงค์ดูบอล
+                        <ul><strong class="h_line_link">ลิงค์ดูบอล</strong>
                         @if($val->normal_links)
                             @foreach($val->normal_links as $e)
 
