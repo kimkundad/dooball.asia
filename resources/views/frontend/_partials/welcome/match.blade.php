@@ -181,6 +181,7 @@ border-bottom: 1px solid #d21d29
     text-align: left;
 }
 .my_card{
+  margin-top:35px;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   padding: 15px;
