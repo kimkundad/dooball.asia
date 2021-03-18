@@ -183,7 +183,7 @@
             </section>
         @endif
         */ ?>
-5555555
+
         <section class="newsletter section">
             <div class="container-sm">
                 {{-- <div class="newsletter-inner section-inner">
