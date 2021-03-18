@@ -175,6 +175,13 @@ border-bottom: 1px solid #d21d29
     padding-right: 15px;
         width: 50%;
 }
+.col-md-12{
+  width: 100%;
+  position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .h2_con_link{
   font-size: 1rem !important;
     line-height: 1.25rem !important;
@@ -187,7 +194,10 @@ border-bottom: 1px solid #d21d29
   padding: 15px;
 }
 </style>
-<div class="my_card">
+\
+  <div class="row">
+      <div class="col-md-12">
+        <div class="my_card">
   <div class="row">
       <div class="col-md-6">
         <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
@@ -196,4 +206,6 @@ border-bottom: 1px solid #d21d29
         <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
       </div>
   </div>
+</div>
+</div>
 </div>
