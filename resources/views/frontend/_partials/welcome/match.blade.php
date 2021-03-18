@@ -175,14 +175,19 @@ border-bottom: 1px solid #d21d29
     padding-right: 15px;
         width: 50%;
 }
+.h2_con_link{
+  font-size: 1rem !important;
+    line-height: 1.25rem !important;
+    text-align: left;
+}
 </style>
-<div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
+<div class="hero-browser pdd-15 round bg-soft-grey ">
   <div class="row">
     <div class="col-md-6">
-      <h2>ดูบอลสด เลือกดูแยกลีก</h2>
+      <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
     </div>
     <div class="col-md-6">
-      <h2>ลิ้งดูบอลออนไลน์ แยกทีม</h2>
+      <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
     </div>
   </div>
 </div>
