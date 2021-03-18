@@ -59,6 +59,10 @@
   text-align: left;
   color: #007bff;
     text-decoration: none;
+    padding: 10px;
+}
+.l-left{
+  text-align: left;
 }
   @media screen and (max-width: 767px) {
     .db-match .league-name{
