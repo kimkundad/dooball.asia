@@ -198,11 +198,9 @@ border-bottom: 1px solid #d21d29
   padding: 15px;
 }
 </style>
-\
-  <div class="row">
-      <div class="col-md-12">
-        <div class="my_card">
-  <div class="row">
+
+
+  <div class="row my_card">
       <div class="col-md-6">
         <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
       </div>
@@ -210,6 +208,3 @@ border-bottom: 1px solid #d21d29
         <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
       </div>
   </div>
-</div>
-</div>
-</div>
