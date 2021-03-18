@@ -64,7 +64,7 @@
                 <div class="hero-inner">
                     <h1 class="hero-title h2-mobile mt-0 is-revealing">{{ $page_topic }}</h1>
                     <p class="hero-paragraph text-left is-revealing">{{ $page_description }}</p>
-                  
+
                     @if($widget->top_banner)
                         @foreach($widget->top_banner as $data)
                             @if($data->active_status)
@@ -87,7 +87,7 @@
                         @endforeach
                     @endif
 
-                  
+
                   {{-- <div class="hero-form newsletter-form field field-grouped is-revealing">
                     <div class="control control-expanded">
                       <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
@@ -183,7 +183,7 @@
             </section>
         @endif
         */ ?>
-
+5555555
         <section class="newsletter section">
             <div class="container-sm">
                 {{-- <div class="newsletter-inner section-inner">
