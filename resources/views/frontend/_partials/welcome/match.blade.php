@@ -167,6 +167,10 @@ border-bottom: 1px solid #d21d29
     margin-left: -15px;
     margin-right: -15px;
 }
+.row:before{
+  content: " ";
+    display: table;
+}
 .col-md-6{
   float: left;
   position: relative;
