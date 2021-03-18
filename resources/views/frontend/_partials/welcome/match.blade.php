@@ -168,10 +168,12 @@ border-bottom: 1px solid #d21d29
     margin-right: -15px;
 }
 .col-md-6{
+  float: left;
   position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+        width: 50%;
 }
 </style>
 <div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
