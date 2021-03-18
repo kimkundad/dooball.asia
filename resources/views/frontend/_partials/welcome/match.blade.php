@@ -5,6 +5,7 @@
     background: #ffffff;
     border-left: 1px solid #d21d29;
 border-right: 1px solid #d21d29;
+border-bottom: 1px solid #d21d29
 }
 .new_my_time{
   font-size: 26px;
