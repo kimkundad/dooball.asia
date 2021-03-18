@@ -3,6 +3,8 @@
     padding: 10px 20px;
     color: #d21d29;
     background: #ffffff;
+    border-left: 1px solid #d21d29;
+border-right: 1px solid #d21d29;
 }
 .new_my_time{
   font-size: 26px;
@@ -69,11 +71,11 @@
   text-align: left;
 }
 .h_line_link{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 .start_ul{
-  padding-left: 15px;
+  margin-left: 20px;
 }
   @media screen and (max-width: 767px) {
     .db-match .league-name{
