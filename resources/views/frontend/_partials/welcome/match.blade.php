@@ -180,8 +180,12 @@ border-bottom: 1px solid #d21d29
     line-height: 1.25rem !important;
     text-align: left;
 }
+.my_card{
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+}
 </style>
-<div class="hero-browser pdd-15 round bg-soft-grey ">
+<div class="my_card">
   <div class="row">
     <div class="col-md-6">
       <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
