@@ -55,6 +55,11 @@
   .db-content {
     background: rgb(255 255 255);
 }
+.l-left a{
+  text-align: left;
+  color: #007bff;
+    text-decoration: none;
+}
   @media screen and (max-width: 767px) {
     .db-match .league-name{
       width:100%
@@ -106,7 +111,7 @@
                         @if($val->sponsor_links)
                             @foreach($val->sponsor_links as $ele)
                             <ul>
-                              <li>
+                              <li class="l-left">
                                 <a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a>
                               </li>
                             </ul>
@@ -115,7 +120,7 @@
                         @if($val->normal_links)
                             @foreach($val->normal_links as $e)
                                 <ul>
-                                  <li>
+                                  <li class="l-left">
                                     <a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a>
                                   </li>
                                 </ul>
