@@ -8,7 +8,7 @@
   font-size: 26px;
 }
 .day_my{
-  font-size: 18px;
+  font-size: 12px;
 }
 .match-over .home-team, .match-over .away-team {
     padding-top: 35px;
@@ -46,6 +46,11 @@
   .my_text_w{
     color: #fff;
   }
+  @media screen and (max-width: 767px) {
+    .db-match .league-name{
+      width:100%
+    }
+  }
 </style>
 <div class="match-over">
     @if($matches)
@@ -68,7 +73,7 @@
                         <span class="home-team">{{ $val->home_team }}</span>
                         <span class="vs mv_vs">-</span>
                         <span class="away-team">{{ $val->away_team }}</span>
-                        <span class="league-name text-r"><strong class="name_ll">{{ $val->match_name }}</strong></span>
+                        <span class="league-name text-r mobile_size"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     </div>
                     <div class="db-content content-{{ ($k+1) }}">
                         @if($val->sponsor_links)
