@@ -162,6 +162,18 @@ border-bottom: 1px solid #d21d29
         </div>
     @endif
 </div>
+<style>
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-md-6{
+  position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+</style>
 <div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
   <div class="row">
     <div class="col-md-6">
