@@ -58,9 +58,20 @@
     }
     .mobile_size{
       display: block;
+      background: #d21d29;
+      width:100%;
+      text-align: center;
     }
     .desk_h{
       display: none;
+    }
+    .name_ll{
+      height: 25px;
+        text-align: center;
+        color: #fff;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 13px;
     }
   }
 </style>
