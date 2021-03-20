@@ -239,6 +239,9 @@ border-bottom: 1px solid #d21d29
       font-size: 15px;
     font-weight: 600;
     }
+    .dashboard-list-box ul li {
+        margin-top: 10px;
+    }
   }
 </style>
 
