@@ -222,6 +222,8 @@ border-bottom: 1px solid #d21d29
     margin-top: 5px;
     text-align: left;
 }
+.app1 {position:relative;}
+.blocklink{position:absolute;top:0px;left:0px;width:100%;height:100%;}​
   @media screen and (max-width: 767px) {
     .h2_con_link{
       font-size: 22px;
@@ -236,17 +238,17 @@ border-bottom: 1px solid #d21d29
         <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
         <div class="dashboard-list-box">
             <ul>
-              <li>
-                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+              <li class="app1">
+                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
-              <li>
-                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+              <li class="app1">
+                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
-              <li>
-                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+              <li class="app1">
+                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
-              <li>
-                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+              <li class="app1">
+                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
             </ul>
         </div>
