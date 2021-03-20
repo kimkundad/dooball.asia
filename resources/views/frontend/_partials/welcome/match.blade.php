@@ -192,6 +192,7 @@ border-bottom: 1px solid #d21d29
     text-align: left;
 }
 .my_card{
+  min-height: 500px;
   margin-top:35px;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
@@ -204,6 +205,22 @@ border-bottom: 1px solid #d21d29
   <div class="row">
       <div class="col-md-6">
         <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
+        <div class="dashboard-list-box">
+            <ul>
+              <li>
+                <h5>ดูบอลพรีเมียร์ลีก</h5>
+              </li>
+              <li>
+                <h5>ดูบอลพรีเมียร์ลีก</h5>
+              </li>
+              <li>
+                <h5>ดูบอลพรีเมียร์ลีก</h5>
+              </li>
+              <li>
+                <h5>ดูบอลพรีเมียร์ลีก</h5>
+              </li>
+            </ul>
+        </div>
       </div>
       <div class="col-md-6">
         <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
