@@ -218,7 +218,7 @@ border-bottom: 1px solid #d21d29
 .dashboard-list-box.with-icons ul li {
     padding-left: 87px;
 }
-.dashboard-list-box.with-icons ul li h5{
+.dashboard-list-box.with-icons ul h5{
     margin-top: 5px;
     text-align: left;
 }
