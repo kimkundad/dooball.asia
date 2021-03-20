@@ -198,6 +198,27 @@ border-bottom: 1px solid #d21d29
   border-radius: 5px;
   padding: 15px;
 }
+.dashboard-list-box {
+    margin: 30px 0 0 0;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 6%);
+    border-radius: 4px;
+}
+.dashboard-list-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+}
+.dashboard-list-box ul li {
+    padding: 23px 30px;
+    border-bottom: 1px solid #eaeaea;
+    transition: 0.3s;
+    position: relative;
+}
+.dashboard-list-box.with-icons ul li {
+    padding-left: 87px;
+}
 </style>
 
 
