@@ -236,7 +236,7 @@ border-bottom: 1px solid #d21d29
     font-weight: 600;
     }
     .detail-h5{
-      font-size: 15px;
+      font-size: 13px;
     font-weight: 600;
     }
     .dashboard-list-box ul li {
