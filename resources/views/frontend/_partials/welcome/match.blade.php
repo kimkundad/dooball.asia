@@ -210,7 +210,7 @@ border-bottom: 1px solid #d21d29
 }
 .dashboard-list-box ul li {
     margin-top: 15px;
-    padding: 23px 30px;
+    padding: 30px 30px;
     border: 1px solid #d21d29;
     transition: 0.3s;
     position: relative;
@@ -223,7 +223,11 @@ border-bottom: 1px solid #d21d29
     text-align: left;
 }
 .app1 {position:relative;}
-.blocklink{position:absolute;top:0px;left:0px;width:100%;height:100%;}​
+.blocklink{
+  position:absolute;top:0px;left:0px;width:100%;height:100%;
+  text-decoration:none;
+  padding: 10px 15px 10px 20px;
+  }​
   @media screen and (max-width: 767px) {
     .h2_con_link{
       font-size: 22px;
