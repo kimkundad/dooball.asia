@@ -218,7 +218,7 @@ border-bottom: 1px solid #d21d29
 .dashboard-list-box.with-icons ul li {
     padding-left: 87px;
 }
-.dashboard-list-box.with-icons ul h5{
+.detail-h5{
     margin-top: 5px;
     text-align: left;
 }
@@ -237,16 +237,16 @@ border-bottom: 1px solid #d21d29
         <div class="dashboard-list-box">
             <ul>
               <li>
-                <h5>ดูบอลพรีเมียร์ลีก</h5>
+                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
               <li>
-                <h5>ดูบอลพรีเมียร์ลีก</h5>
+                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
               <li>
-                <h5>ดูบอลพรีเมียร์ลีก</h5>
+                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
               <li>
-                <h5>ดูบอลพรีเมียร์ลีก</h5>
+                <a><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
             </ul>
         </div>
