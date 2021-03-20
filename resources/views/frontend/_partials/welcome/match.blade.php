@@ -187,7 +187,7 @@ border-bottom: 1px solid #d21d29
     padding-right: 15px;
 }
 .h2_con_link{
-  font-size: 1rem !important;
+  font-size: 24px;
     line-height: 1.25rem !important;
     text-align: left;
 }
@@ -209,8 +209,9 @@ border-bottom: 1px solid #d21d29
     border-radius: 0 0 4px 4px;
 }
 .dashboard-list-box ul li {
+    margin-top: 15px;
     padding: 23px 30px;
-    border-bottom: 1px solid #eaeaea;
+    border: 1px solid #d21d29;
     transition: 0.3s;
     position: relative;
 }
@@ -221,6 +222,11 @@ border-bottom: 1px solid #d21d29
     margin-top: 5px;
     text-align: left;
 }
+  @media screen and (max-width: 767px) {
+    .h2_con_link{
+      font-size: 22px;
+    }
+  }
 </style>
 
 
