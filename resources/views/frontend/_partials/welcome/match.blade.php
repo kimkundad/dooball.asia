@@ -249,26 +249,82 @@ border-bottom: 1px solid #d21d29
 <div class="my_card">
   <div class="row">
       <div class="col-md-6">
-        <h2 class="h2_con_link">ดูบอลสด เลือกดูแยกลีก</h2>
+        <h2 class="h2_con_link">ดูบอลแยกลีก</h2>
         <div class="dashboard-list-box">
             <ul>
               <li class="app1">
-                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+                <a href="/premierleague" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
               </li>
               <li class="app1">
-                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+                <a href="/thaileague" class="blocklink"><h5 class="detail-h5">ดูบอลไทย</h5></a>
               </li>
               <li class="app1">
-                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+                <a href="/jleague" class="blocklink"><h5 class="detail-h5">ดูบอลเจลีก</h5></a>
               </li>
               <li class="app1">
-                <a href="/" class="blocklink"><h5 class="detail-h5">ดูบอลพรีเมียร์ลีก</h5></a>
+                <a href="/basketball" class="blocklink"><h5 class="detail-h5">ดูบาสสด ออนไลน์</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/bundesliga" class="blocklink"><h5 class="detail-h5">ดูบอลบุนเดสลีกา</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/laliga" class="blocklink"><h5 class="detail-h5">ดูบอลลาลีกา</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/calcio" class="blocklink"><h5 class="detail-h5">บอลกัลโช่</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/ligue" class="blocklink"><h5 class="detail-h5">บอล ลีกเอิง ฝรั่งเศส</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/carabao-cup" class="blocklink"><h5 class="detail-h5">บอลคาราบาวคัพ</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/fa-cup" class="blocklink"><h5 class="detail-h5">บอลเอฟเอคัพ</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/europa" class="blocklink"><h5 class="detail-h5">บอลยูโรป้า</h5></a>
               </li>
             </ul>
         </div>
       </div>
       <div class="col-md-6">
-        <h2 class="h2_con_link">ลิ้งดูบอลออนไลน์ แยกทีม</h2>
+        <h2 class="h2_con_link">ดูบอลแยกทีม</h2>
+        <div class="dashboard-list-box">
+            <ul>
+              <li class="app1">
+                <a href="/liverpool" class="blocklink"><h5 class="detail-h5">ดูบอลสด ลิเวอร์พูล</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/manu" class="blocklink"><h5 class="detail-h5">ดูบอลสด แมนยู</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/sapporo" class="blocklink"><h5 class="detail-h5">ดูบอลสด ซัปโปโร</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/arsenal" class="blocklink"><h5 class="detail-h5">ดูบอล อาร์เซน่อล</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/Chelsea" class="blocklink"><h5 class="detail-h5">ดูบอล เชลซี</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/mancity" class="blocklink"><h5 class="detail-h5">ดูบอล แมนซิตี้</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/burirum" class="blocklink"><h5 class="detail-h5">ดูบอล บุรีรัมย์</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/juventus" class="blocklink"><h5 class="detail-h5">ยูเวนตุส ล่าสุด</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/barcelona" class="blocklink"><h5 class="detail-h5">บาร์เซโลน่า คืนนี้สด</h5></a>
+              </li>
+              <li class="app1">
+                <a href="/realmadrid" class="blocklink"><h5 class="detail-h5">เรอัล มาดริด ล่าสุด</h5></a>
+              </li>
+              
+            </ul>
+        </div>
       </div>
   </div>
 </div>
