@@ -186,12 +186,7 @@ border-bottom: 1px solid #d21d29
     padding-left: 15px;
     padding-right: 15px;
 }
-.h2_con_link{
-  font-size: 24px;
-    line-height: 1.25rem !important;
-    text-align: left;
-        color: #666;
-}
+
 .my_card{
   min-height: 500px;
   margin-top:35px;
@@ -229,6 +224,12 @@ border-bottom: 1px solid #d21d29
   text-decoration:none;
   padding: 10px 15px 10px 20px;
   }​
+  .h2_con_link{
+    font-size: 24px;
+      line-height: 1.25rem !important;
+      text-align: left;
+          color: #666;
+  }
   @media screen and (max-width: 767px) {
     .h2_con_link{
       font-size: 22px;
