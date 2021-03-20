@@ -194,8 +194,6 @@ border-bottom: 1px solid #d21d29
 .my_card{
   min-height: 500px;
   margin-top:35px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 5px;
   padding: 15px;
 }
 .dashboard-list-box {
@@ -218,6 +216,10 @@ border-bottom: 1px solid #d21d29
 }
 .dashboard-list-box.with-icons ul li {
     padding-left: 87px;
+}
+.dashboard-list-box.with-icons ul li h5{
+    margin-top: 5px;
+    text-align: left;
 }
 </style>
 
