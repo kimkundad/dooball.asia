@@ -232,7 +232,12 @@ border-bottom: 1px solid #d21d29
   }
   @media screen and (max-width: 767px) {
     .h2_con_link{
-      font-size: 22px;
+      font-size: 15px;
+    font-weight: 600;
+    }
+    .detail-h5{
+      font-size: 15px;
+    font-weight: 600;
     }
   }
 </style>
