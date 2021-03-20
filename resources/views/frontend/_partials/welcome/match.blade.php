@@ -190,6 +190,7 @@ border-bottom: 1px solid #d21d29
   font-size: 24px;
     line-height: 1.25rem !important;
     text-align: left;
+        color: #666;
 }
 .my_card{
   min-height: 500px;
