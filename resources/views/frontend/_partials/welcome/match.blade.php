@@ -188,7 +188,7 @@ border-bottom: 1px solid #d21d29
 }
 
 .my_card{
-  min-height: 500px;
+  min-height: 900px;
   margin-top:35px;
   padding: 15px;
 }
@@ -322,7 +322,7 @@ border-bottom: 1px solid #d21d29
               <li class="app1">
                 <a href="/realmadrid" class="blocklink"><h5 class="detail-h5">เรอัล มาดริด ล่าสุด</h5></a>
               </li>
-              
+
             </ul>
         </div>
       </div>
