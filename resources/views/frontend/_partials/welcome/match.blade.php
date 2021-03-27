@@ -138,7 +138,7 @@ border-bottom: 1px solid #d21d29
                         @endif
                         </ul>
                         <ul class="start_ul"><strong class="h_line_link">ลิงค์ดูบอล</strong>
-                        @if($val->normal_links)
+                        @if(isset($val->normal_links))
                             @foreach($val->normal_links as $e)
 
                                   <li class="l-left">
