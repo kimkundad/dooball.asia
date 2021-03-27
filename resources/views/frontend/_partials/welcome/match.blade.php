@@ -126,6 +126,7 @@ border-bottom: 1px solid #d21d29
                     </div>
                     <span class="league-name text-r mobile_size"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                     <div class="db-content content-{{ ($k+1) }} dd-padd">
+                      @if(isset($val->normal_links))
                       <ul class="start_ul">
                         @if($val->sponsor_links)
                             @foreach($val->sponsor_links as $ele)
@@ -148,6 +149,7 @@ border-bottom: 1px solid #d21d29
                             @endforeach
                         @endif
                         </ul>
+                        @endif
                     </div>
                 </div>
             @endforeach
