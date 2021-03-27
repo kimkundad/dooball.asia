@@ -17,7 +17,6 @@ use App\Http\Controllers\API\MockupController;
 use App\Http\Controllers\API\LogFileController;
 use Illuminate\Support\Facades\DB;
 
-
 use App\Models\DirList;
 use App\Models\ContentDetail;
 use App\Models\Match;

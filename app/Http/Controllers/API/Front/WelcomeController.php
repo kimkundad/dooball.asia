@@ -125,7 +125,7 @@ class WelcomeController extends Controller
                 }
             }
         }
-      //  dd($matchDatas);
+        dd($matchDatas);
 
         return array('total' => $total, 'records' => $matchDatas);
     }
