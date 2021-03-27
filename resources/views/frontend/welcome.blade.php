@@ -223,7 +223,7 @@
     <script>
         // $.ajaxSetup({
         //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') http://milktopcow.com/get-ballzaa.php
         //     }
         // });
 

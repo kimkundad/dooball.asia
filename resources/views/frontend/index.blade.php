@@ -10,6 +10,7 @@
     @endsection
 @endif
 
+
 @section('description')
     <meta name="description" content="{{ $seo_description }}">
 @endsection

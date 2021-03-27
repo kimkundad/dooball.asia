@@ -17,6 +17,7 @@ use App\Http\Controllers\API\MockupController;
 use App\Http\Controllers\API\LogFileController;
 use Illuminate\Support\Facades\DB;
 
+
 use App\Models\DirList;
 use App\Models\ContentDetail;
 use App\Models\Match;
@@ -96,7 +97,7 @@ class WelcomeController extends Controller
             }
         }
 
-        
+
 
         $respDatas = array(
             'pages' => $pageList,
@@ -492,7 +493,7 @@ class WelcomeController extends Controller
             // $pageList = $this->page->list();
 
             $userScreenName = $this->common->displayNameFromUsername($request->user);
-            
+
             $seo_title = 'สถิติเกมทายผลบอล ของ ' . $userScreenName;
             $seo_description = 'สถิติย้อนหลังการทายผลบอล พร้อม ผลสถานะ แพ้ ชนะ เสมอ ของสมาชิก ' . $userScreenName . ' จัดแสดงผลเป็นแบบรายเดือน และรายวัน';
 
@@ -538,9 +539,9 @@ class WelcomeController extends Controller
             $website_robot = ($web->website_robot) ? (int) $web->website_robot : 0;
             // $homeContent = $this->page->pageContentBySlug('stats');
             // $seo_title = ($homeContent->seo_title) ? trim($homeContent->seo_title) : '';
-            
+
             $userScreenName = $this->common->displayNameFromId($request->user_id);
-            
+
             $seo_title = 'สถิติเกมทายผลบอล ของ ' . $userScreenName;
             $seo_description = 'สถิติย้อนหลังการทายผลบอล พร้อม ผลสถานะ แพ้ ชนะ เสมอ ของสมาชิก ' . $userScreenName . ' จัดแสดงผลเป็นแบบรายเดือน และรายวัน';
 
@@ -650,14 +651,14 @@ class WelcomeController extends Controller
             if ($latestCurrentDatas->count() > 0) {
                 $latestDatas = $latestCurrentDatas->get();
                 $firstItem = $latestDatas[0];
-    
+
                 $vs = $firstItem->vs;
                 if (trim($vs) && !empty($vs)) {
                     $vsList = preg_split('/-vs-/', $vs);
                     $homeTeamName = $vsList[0];
                     $awayTeamName = array_key_exists(1, $vsList) ? $vsList[1] : '-';
                 }
-    
+
                 $dirName = $firstItem->dir_name;
                 $fullLink = $firstItem->link;
                 $leagueName = $firstItem->league_name;
@@ -706,7 +707,7 @@ class WelcomeController extends Controller
                             $homeTeamName = $leagueList[$lIndex]->match_datas[$tIndex]->left[0];
                             $awayTeamName = $leagueList[$lIndex]->match_datas[$tIndex]->right[0];
                             // echo $leagueName . ', ' . $homeTeamName . ', ' . $awayTeamName;
-    
+
                             $ffpDetail = ContentDetail::find($thisLink);
                             $ffpDetail->league_name = $leagueName;
                             $ffpDetail->vs = $homeTeamName . '-vs-' . $awayTeamName;
@@ -719,7 +720,7 @@ class WelcomeController extends Controller
                 $seo_title = 'ราคาบอลไหล ล่าสุด ' . $homeTeamName . ' พบ ' . $awayTeamName . ' รายการ ' . $leagueName;
                 $seo_description = $leagueName . ' ' . $homeTeamName . ' พบ ' . $awayTeamName;
                 $seo_description .= ' รวมราคาบอลไหลตั้งแต่ราคาเปิด ในรูปแบบกราฟ ราคาบอลไหล สูงต่ำ 1x2(ราคาแพ้ชนะ) อัตราต่อรอง เริ่มแข่ง เวลา ' . $eventTime . ' วันนี้';
-                
+
                 $hOne = 'กราฟราคาบอล ' . $homeTeamName . ' vs ' . $awayTeamName;
                 $bottomContentHTwo = 'ราคาบอลไหล ' . $leagueName;
                 $bottomContentFirst = 'การดูราคาบอลไหล ลีกเล็กลีกใหญ่ มีความสำคัญ อย่างที่ทราบกัน ราคาบอลเปลี่ยนแปลงตามจำนวนผู้เดิมพัน ฝั่งไหนฝั่งหนึ่งมีการเดิมพันมาก
@@ -1098,7 +1099,7 @@ class WelcomeController extends Controller
     public function testQuery()
     {
         $exceptList = DirList::where('except_this', 1)->where('content', '<>', '[]');
-        
+
         $this->logAsFile->logAsFile('except-this.html', 'Start at: ' . Date('Y-m-d H:i:s'));
 
         if ($exceptList->count() > 0) {
@@ -1108,10 +1109,10 @@ class WelcomeController extends Controller
                 $dirName = $dir->dir_name;
                 $latestContent = $dir->content;
                 $contentList = json_decode($latestContent);
-    
+
                 $resultList = $this->common->rawLeagueList($contentList, $dirName);
                 $totalMatch = $resultList['total_match'];
-    
+
                 $this->logAsFile->logAsFile('except-this.html', '<br>' . $dirName . ' : Total match: ' . $totalMatch, 'append');
 
                 if ($totalMatch > 0) {

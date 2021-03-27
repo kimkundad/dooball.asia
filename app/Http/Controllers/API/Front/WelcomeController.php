@@ -91,7 +91,7 @@ class WelcomeController extends Controller
 		if (strtotime(date("Y-m-d H:i:s")) < strtotime(date("Y-m-d 10:00:00"))) {
 			$mid_this_date = Date('Y-m-d 12:00:00', strtotime("-1 days"));
             $ten_tomorrow_date = Date('Y-m-d 10:00:00');
-            
+
 		} else {
             $mid_this_date = Date('Y-m-d H:i:s', strtotime("-150 minutes"));
         }
@@ -125,6 +125,7 @@ class WelcomeController extends Controller
                 }
             }
         }
+        dd($matchDatas);
 
         return array('total' => $total, 'records' => $matchDatas);
     }
