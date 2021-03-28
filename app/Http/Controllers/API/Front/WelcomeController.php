@@ -139,7 +139,7 @@ class WelcomeController extends Controller
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
-
+            dd($league_name);
           //  dd($league_name); พรีเมียร์ลีก SELECT * FROM `matches` WHERE `match_name` = 'พรีเมียร์ลีก'
 
             // --- start new algorithm --- //
@@ -153,7 +153,7 @@ class WelcomeController extends Controller
                 $mid_this_date = Date('Y-m-d H:i:s', strtotime("-150 minutes"));
             }
             // --- end new algorithm --- //
-            dd($page->league_name);
+
             // --- start key filter --- //
             $homeTeam = $this->page->keyInfo('page', $page, 'home_team');
             $awayTeam = $this->page->keyInfo('page', $page, 'away_team');
