@@ -176,7 +176,7 @@ class WelcomeController extends Controller
                             ->orWhere('away_team', $team_name);
                 });
 
-                dd($matches->get());
+
 
                 if ($homeTeam || $awayTeam) {
                     if ($homeTeam && $awayTeam) {
@@ -192,7 +192,7 @@ class WelcomeController extends Controller
 
             $matches->orderBy('match_time', 'asc');
             $total = $matches->count();
-            //dd($total);
+            dd($total);
             // $q = DB::getQueryLog()[0]['query'];
             // dd($q);
 
