@@ -190,7 +190,7 @@ class WelcomeController extends Controller
 
                   }
                 }
-                dd($l_m_name);
+              //  dd($l_m_name);
                 $get_all_team->where('match_name', $l_m_name);
 
 
