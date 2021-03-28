@@ -92,7 +92,7 @@ class ArticleDetailController extends Controller
             $web = $this->welcome->generalData();
             $website_robot = ($web->website_robot) ? (int) $web->website_robot : 0;
             $web_image = ($web->web_image) ? $web->web_image : $web_image;
-
+            dd($slug);
             $page = $this->page->pageData($slug);
 
             if ($page) {
@@ -114,11 +114,11 @@ class ArticleDetailController extends Controller
 
                 if ((int) $article->id > 0) {
                     $isArticle = true;
-    
+
                     $web_image = $article->showImage;
                     $seo_title = $article->seo_title;
                     $seo_description = $article->seo_description;
-    
+
                     $latest = $this->article->articleLatest();
                     $popular = $this->article->articlePopular();
                 } else {
@@ -148,7 +148,7 @@ class ArticleDetailController extends Controller
                 'latest' => $latest,
                 'popular' => $popular,
                 'social' => $social);
-    
+
             return view('frontend/article-detail', $datas);
         } else {
             $datas = array(
@@ -203,7 +203,7 @@ class ArticleDetailController extends Controller
                 $leagueName = $leagueData->name_th; // matches
                 $leagueShortName = $leagueData->short_name;
                 $leagueScraperName = $leagueData->name_en; // scraper
-    
+
                 if ($leagueData->years) {
                     $leagueIds = (array) json_decode($leagueData->years);
                 }
@@ -213,14 +213,14 @@ class ArticleDetailController extends Controller
                 $seoDescription = ($pageContent['seo_description']) ? $pageContent['seo_description'] : $seoDescription;
                 $topContent = $pageContent['top'];
                 $bottomContent = $pageContent['bottom'];
-    
+
                 $allMatches = $this->welcome->matchDatas();
                 $matches['records'] = $this->common->filterMatches($allMatches['records'], $leagueName);
                 $matches['total'] = count($matches['records']);
-    
+
                 $tabList = $this->mockup->playerYearList();
                 $years = implode(',', $tabList);
-                
+
                 $domain = request()->getHttpHost();
                 $own = env('APP_ENV');
                 $httpHost = ($own == 'production') ? 'https://' : 'http://';
@@ -289,7 +289,7 @@ class ArticleDetailController extends Controller
         $leagueShortName = '';
         $leagueScraperName = ''; // scraper
         $leagueIds = array(Date('Y') => 0);
-        
+
         $latest = array();
         $tabListStructure = array();
         $months = '';
@@ -308,13 +308,13 @@ class ArticleDetailController extends Controller
                 $leagueName = $leagueData->name_th; // matches
                 $leagueShortName = $leagueData->short_name;
                 $leagueScraperName = $leagueData->name_en; // scraper
-    
+
                 if ($leagueData->years) {
                     $leagueIds = (array) json_decode($leagueData->years);
                 }
-    
+
                 $subpageData = LeagueSubpage::where('league_url', $slug)->where('page_url', $page_url)->first();
-    
+
                 if ($subpageData) {
                     $pageContent = $this->onPage->pageContentById($subpageData->onpage_id);
                     $seoTitle = ($pageContent['seo_title']) ? $pageContent['seo_title'] : $seoTitle;
