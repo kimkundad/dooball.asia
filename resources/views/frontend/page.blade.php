@@ -251,6 +251,7 @@
                                     </div>
                                 </div>
                             @endforeach
+                              @endif
                         @else
                             <div class="p-16">-- วันนี้ไม่มีรายการ {{ $not_found_message }} แข่งค่ะ --</div>
                         @endif
