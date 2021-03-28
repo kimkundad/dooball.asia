@@ -258,7 +258,7 @@ class WelcomeController extends Controller
                             $val->normal_links = collect($tlinks)->sortBy('link_seq');
                         }
                         $matchDatas[] = $val;
-                        $get_all_teams[] = $val;
+
                     }
                 }
             }
@@ -268,7 +268,7 @@ class WelcomeController extends Controller
 
         }
 
-        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_teams );
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_team );
     }
 
     public function arrangeLink($links = null)
