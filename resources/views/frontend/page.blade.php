@@ -237,7 +237,7 @@
                                         <span class="away-team">{{ $val->away_team }}</span>
                                         <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                                     </div>
-                                    <div class="db-content content-{{ ($k+1) }} dd-padd">
+                                    <div class="db-content content-{{ ($k+100) }} dd-padd">
                                         @if($val->sponsor_links)
                                             @foreach($val->sponsor_links as $ele)
                                                 <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
