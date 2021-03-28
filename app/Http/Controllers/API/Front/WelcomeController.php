@@ -275,6 +275,62 @@ class WelcomeController extends Controller
 
                     }
                 }
+
+                $allMatchDatas2 = $get_all_team->get();
+                $inCondition = 0;
+
+                foreach ($allMatchDatas2 as $val) {
+                    // --- start condition --- //
+                    if ($keyDate || $keyTime) {
+                        if ($keyDate && $keyTime) {
+                            $kDateTime = $this->common->formToSqlDate($keyDate) . ' ' . $keyTime . ':00';
+                            if ($val->match_time == $kDateTime) {
+                                $inCondition = 1;
+                            }
+                        } else if ($keyDate && ! $keyTime) {
+                            $mDate = $this->common->sqlToFormDate($val->match_time);
+                            if ($keyDate == $mDate) {
+                                $inCondition = 1;
+                            }
+                        } else if (! $keyDate && $keyTime) {
+                            $kDateTime = $this->common->formToSqlDate(Date('d/m/Y')) . ' ' . $keyTime . ':00';
+                            if ($val->match_time == $kDateTime) {
+                                $inCondition = 1;
+                            }
+                        }
+                    } else {
+                        $inCondition = 1;
+                    }
+
+                    if ($keyProgram) {
+                        if (trim($keyProgram) == trim($val->match_name)) {
+                            $inCondition = 1;
+                        } else {
+                            $inCondition = 0;
+                        }
+                    } else {
+                        $inCondition = 1;
+                    }
+                    // --- end condition --- //
+
+                    if ($inCondition == 1) {
+                        $val->match_time = $this->common->showDayOnly(strtotime($val->match_time));
+
+                        $linkSpsDatas = MatchLink::where('match_id', $val->id)->where('link_type', 'Sponsor');
+                        if ($linkSpsDatas->count() > 0) {
+                            $tspon_links = $linkSpsDatas->get();
+                            $val->sponsor_links = collect($tspon_links)->sortBy('link_seq');
+                        }
+
+                        $linkNmDatas = MatchLink::where('match_id', $val->id)->where('link_type', 'Normal');
+                        if ($linkNmDatas->count() > 0) {
+                            $tlinks = $linkNmDatas->get();
+                            $val->normal_links = collect($tlinks)->sortBy('link_seq');
+                        }
+                        $data_all[] = $val;
+
+                    }
+                }
             }
 
 
@@ -287,7 +343,7 @@ class WelcomeController extends Controller
 
         }
 
-        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $total2 );
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $data_all );
     }
 
     public function arrangeLink($links = null)
