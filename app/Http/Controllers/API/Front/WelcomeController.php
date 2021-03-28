@@ -181,8 +181,18 @@ class WelcomeController extends Controller
                             $query->where('home_team', $team_name)
                             ->orWhere('away_team', $team_name);
                 });
-                $get_all_team->where('match_name', $matches->match_name);
-        
+                $total5 = $matches->count();
+                $all7 = $matches->get();
+                if($total5 > 0){
+                  foreach ($all7 as $all77) {
+
+                    $l_m_name = $val->match_name;
+
+                  }
+                }
+
+                $get_all_team->where('match_name', $l_m_name);
+
 
 
               //  dd($matches->get());
