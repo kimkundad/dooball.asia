@@ -92,9 +92,9 @@ class ArticleDetailController extends Controller
             $web = $this->welcome->generalData();
             $website_robot = ($web->website_robot) ? (int) $web->website_robot : 0;
             $web_image = ($web->web_image) ? $web->web_image : $web_image;
-            dd($slug);
+            //dd($slug);
             $page = $this->page->pageData($slug);
-
+            dd($slug);
             if ($page) {
                 $web_image = asset('frontend/images/logo.png');
                 // return redirect()->route('index');
