@@ -136,6 +136,7 @@ class WelcomeController extends Controller
         $matchDatas = array();
         $get_all_team = array();
         $data_all = array();
+        $l_m_name = null;
         if ($page) {
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
@@ -195,7 +196,11 @@ class WelcomeController extends Controller
                   }
                 }
               //  dd($l_m_name);
-                $get_all_team->where('match_name', $l_m_name);
+
+                if(isset($l_m_name)){
+                  $get_all_team->where('match_name', $l_m_name);
+                }
+
 
 
 
