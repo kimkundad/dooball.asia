@@ -114,7 +114,7 @@ class PageController extends Controller
     {
         $retPage = $page;
 
-        dd($retPage);
+        //dd($retPage);
 
         // --- start key filter --- //
         $home_team = $this->keyInfo('page', $page, 'home_team');
