@@ -44,7 +44,7 @@ class PageController extends Controller
         $widget = $this->mockup->widgetMock();
         $social = $this->mockup->socialMock();
         $matchDatas = array();
-        dd($matchDatas);
+
         if ($this->connDatas['connected']) {
             $web = $this->welcome->generalData();
             $website_robot = ($web->website_robot) ? (int) $web->website_robot : 0;
@@ -73,7 +73,7 @@ class PageController extends Controller
                 $notFoundMessage = $this->page->makeMessage($page->page_name);
 
                 $matchDatas = $this->welcome->filterMatchDatas($page);
-
+                dd($matchDatas);
                 $datas = array(
                     'pages' => $pageList,
                     'website_robot' => $website_robot,
