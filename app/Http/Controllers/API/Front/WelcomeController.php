@@ -256,7 +256,6 @@ class WelcomeController extends Controller
                             $val->normal_links = collect($tlinks)->sortBy('link_seq');
                         }
                         $matchDatas[] = $val;
-                        $get_all_teams[] = $val;
                     }
                 }
             }
