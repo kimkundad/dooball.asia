@@ -167,12 +167,12 @@ class WelcomeController extends Controller
             $get_all_team = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
 
             $get_all_team->where('match_name', $league_name);
-            dd($league_name);
+
           //  dd($pageCondition);
             // L premierleague T team
             if ($pageCondition == 'L') {
                 // $matches->where('match_name', 'LIKE', '%' . $league_name . '%');
-                $matches->where('match_name', $league_name);
+                $matches->where('match_name', $page->league_name);
 
             } else if ($pageCondition == 'T') {
 
@@ -275,7 +275,7 @@ class WelcomeController extends Controller
 
         }
 
-        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $total );
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $total2 );
     }
 
     public function arrangeLink($links = null)
