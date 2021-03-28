@@ -108,6 +108,8 @@ class PageController extends Controller
                 'social' => $social,
                 'matchDatas' => $matchDatas);
 
+                dd($datas);
+
             return view('frontend/page', $datas);
         }
     }
