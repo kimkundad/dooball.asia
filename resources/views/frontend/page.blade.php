@@ -228,8 +228,8 @@
                         @if ($matchDatas['total2'] > 0)
                             @foreach($matchDatas['all_match'] as $k => $val)
                                 @if($matchDatas['team_name'] != $val->home_team && $matchDatas['team_name'] != $val->away_team)
-                                <div class="db-collapse border_match">
-                                    <div class="db-match match-{{ ($k+100) }}">
+                                <div class="dd_new db-collapse border_match">
+                                    <div class="db-match match-{{ ($k+1) }}">
                                       <?php $pieces = explode(",", $val->match_time); ?>
                                         <span class="match-time new_my_time">{{ $pieces[1] }} <br /> <strong class="day_my">{{ $pieces[0] }}</strong></span>
                                         <span class="home-team">{{ $val->home_team }}</span>
@@ -237,7 +237,7 @@
                                         <span class="away-team">{{ $val->away_team }}</span>
                                         <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                                     </div>
-                                    <div class="db-content content-{{ ($k+100) }} dd-padd">
+                                    <div class="db-content content-{{ ($k+1) }} dd-padd">
                                         @if($val->sponsor_links)
                                             @foreach($val->sponsor_links as $ele)
                                                 <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
