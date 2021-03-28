@@ -68,7 +68,7 @@
                 <style>
                 .db-match {
                     padding: 10px 20px;
-                    color: #fff;
+                    color: #d21d29;
                     background: #ffffff;
                     border-left: 1px solid #d21d29;
                 border-right: 1px solid #d21d29;
@@ -170,12 +170,12 @@
                 </style>
                 <div class="hero-inner">
                     <div class="db-collapse">
-                        <div class="db-match match-0">
-                            <span class="match-time">วันเวลา</span>
-                            <span class="home-team">ทีมเหย้า</span>
-                            <span class="vs">Vs</span>
-                            <span class="away-team">ทีมเยือน</span>
-                            <span class="league-name">ชื่อลีก</span>
+                        <div class="my_text_w db-match match-0">
+                          <span class="match-time1">วันเวลา</span>
+                          <span class="home-team1">ทีมเหย้า</span>
+                          <span class="vs1">Vs</span>
+                          <span class="away-team1">ทีมเยือน</span>
+                          <span class="league-name1">ชื่อลีก</span>
                         </div>
                     </div>
                     @if($matchDatas)

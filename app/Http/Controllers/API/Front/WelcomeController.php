@@ -140,7 +140,7 @@ class WelcomeController extends Controller
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
 
-          //  dd($league_name); พรีเมียร์ลีก
+          //  dd($league_name); พรีเมียร์ลีก SELECT * FROM `matches` WHERE `match_name` = 'พรีเมียร์ลีก'
 
             // --- start new algorithm --- //
             $mid_this_date = Date('Y-m-d 11:00:00');
