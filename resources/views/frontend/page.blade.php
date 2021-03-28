@@ -237,7 +237,7 @@
                                         <span class="away-team">{{ $val->away_team }}</span>
                                         <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                                     </div>
-                                    <div class="db-content content-{{ ($k+1) }} dd-padd">
+                                    <div class="db-content contentss-{{ ($k+1) }} dd-padd">
                                         @if($val->sponsor_links)
                                             @foreach($val->sponsor_links as $ele)
                                                 <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
@@ -292,7 +292,7 @@
         $('.dd_new').each(function(index) {
             // console.log( index + ": " + $( this ).text() );
             $('.match-' + index).click(function(){
-                $('.content-' + index).slideToggle('medium');
+                $('.contentss-' + index).slideToggle('medium');
             });
         });
 
