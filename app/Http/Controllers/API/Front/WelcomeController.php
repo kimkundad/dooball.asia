@@ -170,6 +170,7 @@ class WelcomeController extends Controller
             if ($pageCondition == 'L') {
                 // $matches->where('match_name', 'LIKE', '%' . $league_name . '%');
                 $matches->where('match_name', $league_name);
+                $get_all_team->where('match_name', $league_name);
             } else if ($pageCondition == 'T') {
 
                 $get_all_team->where('match_name', $league_name);
