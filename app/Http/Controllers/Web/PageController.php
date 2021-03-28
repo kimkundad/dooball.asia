@@ -60,7 +60,7 @@ class PageController extends Controller
             }
 
             $page = $this->page->pageData($slug);
-            dd($page);
+          //  dd($page);
             if ($page) {
                 $page = $this->page->replaceKeyWithValue($page);
 
@@ -110,7 +110,7 @@ class PageController extends Controller
                 'social' => $social,
                 'matchDatas' => $matchDatas);
 
-              //  dd($datas);
+                dd($datas);
 
             return view('frontend/page', $datas);
         }
