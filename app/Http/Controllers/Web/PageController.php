@@ -63,7 +63,7 @@ class PageController extends Controller
           //  dd($page);
             if ($page) {
                 $page = $this->page->replaceKeyWithValue($page);
-
+                dd($page);
                 $seo_title = ($page->seo_title) ? trim($page->seo_title) : '';
                 $seo_description = ($page->seo_description) ? trim($page->seo_description) : '';
                 $page_topic = ($page->title) ? trim($page->title) : '';
