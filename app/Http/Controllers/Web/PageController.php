@@ -88,6 +88,8 @@ class PageController extends Controller
                     'social' => $social,
                     'matchDatas' => $matchDatas);
 
+                    dd($datas);
+
                 return view('frontend/page', $datas);
             } else {
                 abort(404);
@@ -108,7 +110,7 @@ class PageController extends Controller
                 'social' => $social,
                 'matchDatas' => $matchDatas);
 
-                dd($datas);
+              //  dd($datas);
 
             return view('frontend/page', $datas);
         }
