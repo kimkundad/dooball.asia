@@ -101,8 +101,8 @@ class ArticleDetailController extends Controller
 
                 $isPage = true;
                 $page = $this->page->replaceKeyWithValue($page);
-                dd($slug);
-                
+
+
                 $seo_title = ($page->seo_title) ? trim($page->seo_title) : '';
                 $seo_description = ($page->seo_description) ? trim($page->seo_description) : '';
                 $page_topic = ($page->title) ? trim($page->title) : '';
@@ -110,6 +110,7 @@ class ArticleDetailController extends Controller
                 $page_detail = ($page->detail) ? trim($page->detail) : '';
 
                 $matchDatas = $this->welcome->filterMatchDatas($page);
+                dd($page);
             } else {
                 $article = $this->article->articleDetail($slug);
 
