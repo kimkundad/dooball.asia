@@ -139,7 +139,7 @@ class WelcomeController extends Controller
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
-            dd($league_name);
+            dd($page->league_name);
           //  dd($league_name); พรีเมียร์ลีก SELECT * FROM `matches` WHERE `match_name` = 'พรีเมียร์ลีก'
 
             // --- start new algorithm --- //
