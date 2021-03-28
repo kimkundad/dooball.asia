@@ -44,7 +44,7 @@ class PageController extends Controller
         $widget = $this->mockup->widgetMock();
         $social = $this->mockup->socialMock();
         $matchDatas = array();
-
+        dd($matchDatas);
         if ($this->connDatas['connected']) {
             $web = $this->welcome->generalData();
             $website_robot = ($web->website_robot) ? (int) $web->website_robot : 0;
@@ -110,7 +110,7 @@ class PageController extends Controller
                 'social' => $social,
                 'matchDatas' => $matchDatas);
 
-                dd($datas);
+
 
             return view('frontend/page', $datas);
         }
