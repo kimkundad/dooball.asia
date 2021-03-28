@@ -211,6 +211,51 @@
                         <div class="p-16">-- วันนี้ไม่มีแข่งค่ะ --</div>
                     @endif
                 </div>
+                <br /><br /><br />
+
+                <div class="hero-inner">
+                    <div class="db-collapse">
+                        <div class="my_text_w db-match match-0 teee">
+                          <span class="match-time1">วันเวลา</span>
+                          <span class="home-team1">ทีมเหย้า</span>
+                          <span class="vs1">Vs</span>
+                          <span class="away-team1">ทีมเยือน</span>
+                          <span class="league-name1">ชื่อลีก</span>
+                        </div>
+                    </div>
+                    @if($matchDatas)
+                        @if ($matchDatas['total2'] > 0)
+                            @foreach($matchDatas['all_match'] as $k => $val)
+                                <div class="db-collapse border_match">
+                                    <div class="db-match match-{{ ($k+1) }}">
+                                      <?php $pieces = explode(",", $val->match_time); ?>
+                                        <span class="match-time new_my_time">{{ $pieces[1] }} <br /> <strong class="day_my">{{ $pieces[0] }}</strong></span>
+                                        <span class="home-team">{{ $val->home_team }}</span>
+                                        <span class="vs mv_vs">-</span>
+                                        <span class="away-team">{{ $val->away_team }}</span>
+                                        <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
+                                    </div>
+                                    <div class="db-content content-{{ ($k+1) }} dd-padd">
+                                        @if($val->sponsor_links)
+                                            @foreach($val->sponsor_links as $ele)
+                                                <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
+                                            @endforeach
+                                        @endif
+                                        @if($val->normal_links)
+                                            @foreach($val->normal_links as $e)
+                                                <p><a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a></p>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="p-16">-- วันนี้ไม่มีรายการ {{ $not_found_message }} แข่งค่ะ --</div>
+                        @endif
+                    @else
+                        <div class="p-16">-- วันนี้ไม่มีแข่งค่ะ --</div>
+                    @endif
+                </div>
                 <div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
                     {!! $page_detail !!}
                 </div>
