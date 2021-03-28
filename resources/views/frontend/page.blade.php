@@ -229,7 +229,7 @@
                             @foreach($matchDatas['all_match'] as $k => $val)
                                 @if($matchDatas['team_name'] != $val->home_team && $matchDatas['team_name'] != $val->away_team)
                                 <div class="dd_new  border_match">
-                                    <div class="db-match match-{{ ($k+1) }}">
+                                    <div class="db-match matchss-{{ ($k+1) }}">
                                       <?php $pieces = explode(",", $val->match_time); ?>
                                         <span class="match-time new_my_time">{{ $pieces[1] }} <br /> <strong class="day_my">{{ $pieces[0] }}</strong></span>
                                         <span class="home-team">{{ $val->home_team }}</span>
@@ -291,7 +291,7 @@
 
         $('.dd_new').each(function(index) {
             // console.log( index + ": " + $( this ).text() );
-            $('.match-' + index).click(function(){
+            $('.matchss-' + index).click(function(){
                 $('.contentss-' + index).slideToggle('medium');
             });
         });
