@@ -198,7 +198,6 @@ class WelcomeController extends Controller
 
 
             $matches->orderBy('match_time', 'asc');
-            $get_all_team->orderBy('match_time', 'asc');
             $total = $matches->count();
             //dd($total);
             // $q = DB::getQueryLog()[0]['query'];
@@ -261,6 +260,70 @@ class WelcomeController extends Controller
                     }
                 }
             }
+
+
+            $get_all_team->orderBy('match_time', 'asc');
+
+            if ($total > 0) {
+                $allMatchDatas = $get_all_team->get();
+                $inCondition = 0;
+
+                foreach ($allMatchDatas as $val) {
+                    // --- start condition --- //
+                    if ($keyDate || $keyTime) {
+                        if ($keyDate && $keyTime) {
+                            $kDateTime = $this->common->formToSqlDate($keyDate) . ' ' . $keyTime . ':00';
+                            if ($val->match_time == $kDateTime) {
+                                $inCondition = 1;
+                            }
+                        } else if ($keyDate && ! $keyTime) {
+                            $mDate = $this->common->sqlToFormDate($val->match_time);
+                            if ($keyDate == $mDate) {
+                                $inCondition = 1;
+                            }
+                        } else if (! $keyDate && $keyTime) {
+                            $kDateTime = $this->common->formToSqlDate(Date('d/m/Y')) . ' ' . $keyTime . ':00';
+                            if ($val->match_time == $kDateTime) {
+                                $inCondition = 1;
+                            }
+                        }
+                    } else {
+                        $inCondition = 1;
+                    }
+
+                    if ($keyProgram) {
+                        if (trim($keyProgram) == trim($val->match_name)) {
+                            $inCondition = 1;
+                        } else {
+                            $inCondition = 0;
+                        }
+                    } else {
+                        $inCondition = 1;
+                    }
+                    // --- end condition --- //
+
+                    if ($inCondition == 1) {
+                        $val->match_time = $this->common->showDayOnly(strtotime($val->match_time));
+
+                        $linkSpsDatas = MatchLink::where('match_id', $val->id)->where('link_type', 'Sponsor');
+                        if ($linkSpsDatas->count() > 0) {
+                            $tspon_links = $linkSpsDatas->get();
+                            $val->sponsor_links = collect($tspon_links)->sortBy('link_seq');
+                        }
+
+                        $linkNmDatas = MatchLink::where('match_id', $val->id)->where('link_type', 'Normal');
+                        if ($linkNmDatas->count() > 0) {
+                            $tlinks = $linkNmDatas->get();
+                            $val->normal_links = collect($tlinks)->sortBy('link_seq');
+                        }
+                        $get_all_teams[] = $val;
+                    }
+                }
+            }
+
+
+
+
         }
 
         return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_teams );
