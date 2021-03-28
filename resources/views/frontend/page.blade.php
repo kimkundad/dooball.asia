@@ -65,7 +65,109 @@
                     <h1 class="hero-title h2-mobile mt-0 is-revealing">{{ $page_topic }}</h1>
                     <p class="hero-paragraph is-revealing">{{ $page_description }}</p>
                 </div>
-
+                <style>
+                .db-match {
+                    padding: 10px 20px;
+                    color: #d21d29;
+                    background: #ffffff;
+                    border-left: 1px solid #d21d29;
+                border-right: 1px solid #d21d29;
+                border-bottom: 1px solid #d21d29
+                }
+                .new_my_time{
+                  font-size: 26px;
+                }
+                .day_my{
+                  font-size: 12px;
+                }
+                .match-over .home-team, .match-over .away-team {
+                    padding-top: 35px;
+                    font-size: 18px;
+                }
+                .mv_vs{
+                  padding-top: 30px;
+                  font-size: 24px;
+                }
+                .name_ll{
+                  height: 25px;
+                    text-align: right;
+                    background: #d21d29;
+                    color: #fff;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    font-size: 13px;
+                }
+                .border_match{
+                  border-right: 1px solid #7b030b;
+                    border-bottom: 1px solid #7b030b;
+                    border-left: 1px solid #7b030b;
+                }
+                .text-r{
+                  text-align: right;
+                }
+                .db-match:not(.match-0):hover {
+                    cursor: pointer;
+                    background: #fff;
+                  }
+                  .ffp-outmost .db-match:not(.match-0):hover {
+                    cursor: pointer;
+                    background: #fff;
+                  }
+                  .my_text_w{
+                    color: #fff;
+                  }
+                  .mobile_size{
+                    display: none;
+                  }
+                  .desk_h{
+                    display: block;
+                  }
+                  .db-content {
+                    background: rgb(255 255 255);
+                }
+                .l-left a{
+                  text-align: left;
+                  color: #007bff;
+                    text-decoration: none;
+                    padding: 10px;
+                }
+                .l-left{
+                  text-align: left;
+                }
+                .dd-padd{
+                  padding: 10px;
+                  text-align: left;
+                }
+                .h_line_link{
+                  font-size: 18px;
+                  font-weight: 600;
+                }
+                .start_ul{
+                  margin-left: 20px;
+                }
+                  @media screen and (max-width: 767px) {
+                    .db-match .league-name{
+                      width:100%
+                    }
+                    .mobile_size{
+                      display: block;
+                      background: #d21d29;
+                      width:100%;
+                      text-align: center;
+                    }
+                    .desk_h{
+                      display: none;
+                    }
+                    .name_ll{
+                      height: 25px;
+                        text-align: center;
+                        color: #fff;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        font-size: 13px;
+                    }
+                  }
+                </style>
                 <div class="hero-inner">
                     <div class="db-collapse">
                         <div class="db-match match-0">
