@@ -213,6 +213,7 @@
                 </div>
                 <br /><br /><br />
 
+                @if($matchDatas['val_ch'] == 1)
                 <div class="hero-inner">
                     <div class="db-collapse">
                         <div class="my_text_w db-match match-0 teee">
@@ -256,6 +257,8 @@
                         <div class="p-16">-- วันนี้ไม่มีแข่งค่ะ --</div>
                     @endif
                 </div>
+                @endif
+                <br />
                 <div class="hero-browser pdd-15 round bg-soft-grey welcome-detail">
                     {!! $page_detail !!}
                 </div>

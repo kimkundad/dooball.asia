@@ -345,7 +345,7 @@ class WelcomeController extends Controller
 
         }
 
-        return array('total' => $total, 'total2' => $total2, 'records' => $matchDatas, 'all_match' => $data_all );
+        return array('total' => $total, 'total2' => $total2, 'records' => $matchDatas, 'all_match' => $data_all, 'val_ch' => $val_ch );
     }
 
     public function arrangeLink($links = null)
