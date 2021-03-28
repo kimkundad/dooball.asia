@@ -63,7 +63,7 @@ class PageController extends Controller
           //  dd($page);
             if ($page) {
                 $page = $this->page->replaceKeyWithValue($page);
-              //  dd($page);
+                dd($page);
                 $seo_title = ($page->seo_title) ? trim($page->seo_title) : '';
                 $seo_description = ($page->seo_description) ? trim($page->seo_description) : '';
                 $page_topic = ($page->title) ? trim($page->title) : '';
@@ -71,7 +71,7 @@ class PageController extends Controller
                 $page_detail = ($page->detail) ? trim($page->detail) : '';
 
                 $notFoundMessage = $this->page->makeMessage($page->page_name);
-                dd($page);
+              //  dd($page);
                 $matchDatas = $this->welcome->filterMatchDatas($page);
                 //dd($matchDatas);
                 $datas = array(
