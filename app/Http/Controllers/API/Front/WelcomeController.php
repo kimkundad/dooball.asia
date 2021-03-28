@@ -192,7 +192,7 @@ class WelcomeController extends Controller
 
             $matches->orderBy('match_time', 'asc');
             $total = $matches->count();
-            dd($total);
+            dd($matches);
             // $q = DB::getQueryLog()[0]['query'];
             // dd($q);
 
