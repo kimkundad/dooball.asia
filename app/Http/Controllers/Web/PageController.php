@@ -71,7 +71,7 @@ class PageController extends Controller
                 $page_detail = ($page->detail) ? trim($page->detail) : '';
 
                 $notFoundMessage = $this->page->makeMessage($page->page_name);
-
+                dd($page);
                 $matchDatas = $this->welcome->filterMatchDatas($page);
                 //dd($matchDatas);
                 $datas = array(
