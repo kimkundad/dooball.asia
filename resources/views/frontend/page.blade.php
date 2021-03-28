@@ -227,6 +227,7 @@
                     @if($matchDatas)
                         @if ($matchDatas['total2'] > 0)
                             @foreach($matchDatas['all_match'] as $k => $val)
+                                @if($matchDatas['team_name'] != $val->home_team || $matchDatas['team_name'] != $val->away_team)
                                 <div class="db-collapse border_match">
                                     <div class="db-match match-{{ ($k+1) }}">
                                       <?php $pieces = explode(",", $val->match_time); ?>

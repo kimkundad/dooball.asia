@@ -139,7 +139,7 @@ class WelcomeController extends Controller
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
-            dd($team_name);
+
           //  dd($page->league_name);
           //  dd($league_name); พรีเมียร์ลีก SELECT * FROM `matches` WHERE `match_name` = 'พรีเมียร์ลีก'
 
@@ -346,7 +346,7 @@ class WelcomeController extends Controller
 
         }
 
-        return array('total' => $total, 'total2' => $total2, 'records' => $matchDatas, 'all_match' => $data_all, 'val_ch' => $val_ch );
+        return array('total' => $total, 'total2' => $total2, 'records' => $matchDatas, 'all_match' => $data_all, 'val_ch' => $val_ch, 'team_name' => $team_name );
     }
 
     public function arrangeLink($links = null)
