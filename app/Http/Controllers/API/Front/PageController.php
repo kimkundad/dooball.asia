@@ -16,7 +16,7 @@ class PageController extends Controller
         $pages = array();
 
         $mnData = Page::where('show_on_menu', 1)->where('active_status', 1);
-    
+
         if ($mnData->count() > 0) {
             $pages = $mnData->get();
         }
@@ -109,10 +109,12 @@ class PageController extends Controller
 
         return $retMessage;
     }
-    
+
     public function replaceKeyWithValue($page = null)
     {
         $retPage = $page;
+
+        dd($retPage);
 
         // --- start key filter --- //
         $home_team = $this->keyInfo('page', $page, 'home_team');
