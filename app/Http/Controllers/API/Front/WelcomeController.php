@@ -140,6 +140,8 @@ class WelcomeController extends Controller
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
 
+            dd($league_name);
+
             // --- start new algorithm --- //
             $mid_this_date = Date('Y-m-d 11:00:00');
             $ten_tomorrow_date = Date('Y-m-d 10:00:00', strtotime("+1 days"));
