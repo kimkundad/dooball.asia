@@ -170,7 +170,7 @@
                 </style>
                 <div class="hero-inner">
                     <div class="db-collapse">
-                        <div class="my_text_w db-match match-0">
+                        <div class="my_text_w db-match match-0 teee">
                           <span class="match-time1">วันเวลา</span>
                           <span class="home-team1">ทีมเหย้า</span>
                           <span class="vs1">Vs</span>
