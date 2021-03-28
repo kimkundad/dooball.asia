@@ -134,7 +134,7 @@ class WelcomeController extends Controller
     {
         $total = 0;
         $matchDatas = array();
-
+        $get_all_team = array();
         if ($page) {
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
@@ -260,7 +260,7 @@ class WelcomeController extends Controller
             }
         }
 
-        return array('total' => $total, 'records' => $matchDatas );
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_team );
     }
 
     public function arrangeLink($links = null)
