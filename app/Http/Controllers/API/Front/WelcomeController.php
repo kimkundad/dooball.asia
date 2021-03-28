@@ -263,8 +263,8 @@ class WelcomeController extends Controller
 
 
             $get_all_team->orderBy('match_time', 'asc');
-
-            if ($total > 0) {
+            $total2 = $get_all_team->count();
+            if ($total2 > 0) {
                 $allMatchDatas = $get_all_team->get();
                 $inCondition = 0;
 
