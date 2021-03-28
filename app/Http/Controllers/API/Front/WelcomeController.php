@@ -167,7 +167,7 @@ class WelcomeController extends Controller
             $get_all_team = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
 
             $get_all_team->where('match_name', $league_name);
-            dd($league_name->count());
+            dd($league_name);
           //  dd($pageCondition);
             // L premierleague T team
             if ($pageCondition == 'L') {
