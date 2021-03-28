@@ -135,6 +135,7 @@ class WelcomeController extends Controller
         $total = 0;
         $matchDatas = array();
         $get_all_team = array();
+        $data_all = array();
         if ($page) {
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
