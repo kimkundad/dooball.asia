@@ -68,7 +68,7 @@
                 <style>
                 .db-match {
                     padding: 10px 20px;
-                    color: #d21d29;
+                    color: #fff;
                     background: #ffffff;
                     border-left: 1px solid #d21d29;
                 border-right: 1px solid #d21d29;
