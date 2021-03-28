@@ -110,10 +110,10 @@ class ArticleDetailController extends Controller
                 $page_detail = ($page->detail) ? trim($page->detail) : '';
 
                 $matchDatas = $this->welcome->filterMatchDatas($page);
-              //  dd($matchDatas);
+                dd($matchDatas);
             } else {
                 $article = $this->article->articleDetail($slug);
-                dd($article);
+
                 if ((int) $article->id > 0) {
                     $isArticle = true;
 

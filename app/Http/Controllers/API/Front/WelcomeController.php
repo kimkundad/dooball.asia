@@ -171,10 +171,14 @@ class WelcomeController extends Controller
                 $matches->where('match_name', $league_name);
             } else if ($pageCondition == 'T') {
 
+                $get_all_team = $matches->where('match_name', $league_name);
+
                 $matches->where(function ($query) use ($team_name) {
                             $query->where('home_team', $team_name)
                             ->orWhere('away_team', $team_name);
                 });
+
+
 
               //  dd($matches->get());
 
@@ -256,7 +260,7 @@ class WelcomeController extends Controller
             }
         }
 
-        return array('total' => $total, 'records' => $matchDatas);
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_team );
     }
 
     public function arrangeLink($links = null)
