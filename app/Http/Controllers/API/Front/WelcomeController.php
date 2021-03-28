@@ -165,15 +165,14 @@ class WelcomeController extends Controller
             // DB::enableQueryLog();
             $matches = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
             $get_all_team = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
+            $get_all_team->where('match_name', $league_name);
           //  dd($pageCondition);
             // L premierleague T team
             if ($pageCondition == 'L') {
                 // $matches->where('match_name', 'LIKE', '%' . $league_name . '%');
                 $matches->where('match_name', $league_name);
-                $get_all_team->where('match_name', $league_name);
-            } else if ($pageCondition == 'T') {
 
-                $get_all_team->where('match_name', $league_name);
+            } else if ($pageCondition == 'T') {
 
                 $matches->where(function ($query) use ($team_name) {
                             $query->where('home_team', $team_name)
