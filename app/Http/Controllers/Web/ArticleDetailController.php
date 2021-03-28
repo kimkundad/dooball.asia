@@ -94,14 +94,15 @@ class ArticleDetailController extends Controller
             $web_image = ($web->web_image) ? $web->web_image : $web_image;
             //dd($slug);
             $page = $this->page->pageData($slug);
-            dd($slug);
+
             if ($page) {
                 $web_image = asset('frontend/images/logo.png');
                 // return redirect()->route('index');
 
                 $isPage = true;
                 $page = $this->page->replaceKeyWithValue($page);
-
+                dd($slug);
+                
                 $seo_title = ($page->seo_title) ? trim($page->seo_title) : '';
                 $seo_description = ($page->seo_description) ? trim($page->seo_description) : '';
                 $page_topic = ($page->title) ? trim($page->title) : '';
