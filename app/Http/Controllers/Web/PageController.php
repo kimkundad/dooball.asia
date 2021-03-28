@@ -73,7 +73,7 @@ class PageController extends Controller
                 $notFoundMessage = $this->page->makeMessage($page->page_name);
 
                 $matchDatas = $this->welcome->filterMatchDatas($page);
-                dd($matchDatas);
+                //dd($matchDatas);
                 $datas = array(
                     'pages' => $pageList,
                     'website_robot' => $website_robot,
