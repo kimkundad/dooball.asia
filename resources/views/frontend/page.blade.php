@@ -238,16 +238,28 @@
                                         <span class="league-name text-r desk_h"><strong class="name_ll">{{ $val->match_name }}</strong></span>
                                     </div>
                                     <div class="db-content contentss-{{ ($k+1) }} dd-padd">
+                                      <ul class="start_ul">
                                         @if($val->sponsor_links)
                                             @foreach($val->sponsor_links as $ele)
-                                                <p><a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a></p>
+
+                                              <li class="l-left">
+                                                <a href="{{ $ele->url }}" target="_BLANK">{{ $ele->name }}</a>
+                                              </li>
+
                                             @endforeach
                                         @endif
-                                        @if($val->normal_links)
+                                        </ul>
+                                        <ul class="start_ul"><strong class="h_line_link">ลิงค์ดูบอล</strong>
+                                        @if(isset($val->normal_links))
                                             @foreach($val->normal_links as $e)
-                                                <p><a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a></p>
+
+                                                  <li class="l-left">
+                                                    <a href="{{ $e->url }}" target="_BLANK">{{ $e->name }}</a>
+                                                  </li>
+
                                             @endforeach
                                         @endif
+                                        </ul>
                                     </div>
                                 </div>
                                 @endif
