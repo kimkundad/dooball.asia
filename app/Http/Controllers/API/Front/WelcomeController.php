@@ -153,7 +153,7 @@ class WelcomeController extends Controller
                 $mid_this_date = Date('Y-m-d H:i:s', strtotime("-150 minutes"));
             }
             // --- end new algorithm --- //
-
+            dd($page->league_name);
             // --- start key filter --- //
             $homeTeam = $this->page->keyInfo('page', $page, 'home_team');
             $awayTeam = $this->page->keyInfo('page', $page, 'away_team');
@@ -165,7 +165,7 @@ class WelcomeController extends Controller
             // DB::enableQueryLog();
             $matches = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
             $get_all_team = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
-            dd($page->league_name);
+
             $get_all_team->where('match_name', $page->league_name);
 
           //  dd($pageCondition);
