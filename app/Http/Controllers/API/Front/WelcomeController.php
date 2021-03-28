@@ -176,7 +176,7 @@ class WelcomeController extends Controller
                             ->orWhere('away_team', $team_name);
                 });
 
-                dd($matches->get());
+              //  dd($matches->get());
 
               /*  if ($homeTeam || $awayTeam) {
                     if ($homeTeam && $awayTeam) {
