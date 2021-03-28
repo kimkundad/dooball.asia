@@ -104,7 +104,7 @@ border-bottom: 1px solid #d21d29
 <div class="match-over">
     @if(count($matches) > 0)
         <div class="db-collapse">
-          <div class="my_text_w db-match match-0">
+          <div class="my_text_w db-match match-0 tee">
               <span class="match-time1">วันเวลา</span>
               <span class="home-team1">ทีมเหย้า</span>
               <span class="vs1">Vs</span>
