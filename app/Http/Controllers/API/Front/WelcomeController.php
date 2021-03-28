@@ -257,13 +257,13 @@ class WelcomeController extends Controller
                             $val->normal_links = collect($tlinks)->sortBy('link_seq');
                         }
                         $matchDatas[] = $val;
-                        $get_all_team[] = $val;
+                        $get_all_teams[] = $val;
                     }
                 }
             }
         }
 
-        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_team );
+        return array('total' => $total, 'records' => $matchDatas, 'all_match' => $get_all_teams );
     }
 
     public function arrangeLink($links = null)
