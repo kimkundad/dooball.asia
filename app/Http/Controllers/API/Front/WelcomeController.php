@@ -178,7 +178,7 @@ class WelcomeController extends Controller
 
                 dd($matches->get());
 
-                if ($homeTeam || $awayTeam) {
+              /*  if ($homeTeam || $awayTeam) {
                     if ($homeTeam && $awayTeam) {
                         $matches->where('home_team', 'LIKE', '%' . $homeTeam . '%')->where('away_team', 'LIKE', '%' . $awayTeam . '%');
                     } else if ($homeTeam && ! $awayTeam) {
@@ -186,7 +186,9 @@ class WelcomeController extends Controller
                     } else if (! $homeTeam && $awayTeam) {
                         $matches->where('away_team', 'LIKE', '%' . $awayTeam . '%');
                     }
-                }
+                }*/
+
+
             }
 
 
