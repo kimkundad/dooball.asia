@@ -60,7 +60,7 @@ class PageController extends Controller
             }
 
             $page = $this->page->pageData($slug);
-
+            dd($page);
             if ($page) {
                 $page = $this->page->replaceKeyWithValue($page);
 
