@@ -139,7 +139,7 @@ class WelcomeController extends Controller
             $pageCondition = $page->page_condition;
             $league_name = ($page->league_name) ? trim($page->league_name) : '';
             $team_name = ($page->team_name) ? trim($page->team_name) : '';
-            dd($page->league_name);
+          //  dd($page->league_name);
           //  dd($league_name); พรีเมียร์ลีก SELECT * FROM `matches` WHERE `match_name` = 'พรีเมียร์ลีก'
 
             // --- start new algorithm --- //
@@ -166,13 +166,14 @@ class WelcomeController extends Controller
             $matches = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
             $get_all_team = Match::whereBetween('match_time', [$mid_this_date, $ten_tomorrow_date]);
 
-            $get_all_team->where('match_name', $page->league_name);
+
 
           //  dd($pageCondition);
             // L premierleague T team
             if ($pageCondition == 'L') {
                 // $matches->where('match_name', 'LIKE', '%' . $league_name . '%');
                 $matches->where('match_name', $page->league_name);
+                $get_all_team->where('match_name', $page->league_name);
 
             } else if ($pageCondition == 'T') {
 
@@ -181,6 +182,7 @@ class WelcomeController extends Controller
                             ->orWhere('away_team', $team_name);
                 });
 
+                dd($matches->get());
 
 
               //  dd($matches->get());
