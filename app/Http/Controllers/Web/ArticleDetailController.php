@@ -113,7 +113,7 @@ class ArticleDetailController extends Controller
               //  dd($matchDatas);
             } else {
                 $article = $this->article->articleDetail($slug);
-
+                dd($article)
                 if ((int) $article->id > 0) {
                     $isArticle = true;
 
@@ -166,7 +166,7 @@ class ArticleDetailController extends Controller
                 'widget' => $widget,
                 'social' => $social,
                 'matchDatas' => $matchDatas);
-                dd($datas);
+              //  dd($datas);
             return view('frontend/page', $datas);
         }
 
