@@ -170,7 +170,7 @@ class WelcomeController extends Controller
                 // $matches->where('match_name', 'LIKE', '%' . $league_name . '%');
                 $matches->where('match_name', $league_name);
             } else if ($pageCondition == 'T') {
-              dd($team_name);
+            
                 $matches->where(function ($query) use ($team_name) {
                             $query->where('home_team', $team_name)
                             ->orWhere('away_team', $team_name);
@@ -186,6 +186,7 @@ class WelcomeController extends Controller
                     }
                 }
             }
+            dd($matches);
 
             $matches->orderBy('match_time', 'asc');
             $total = $matches->count();
