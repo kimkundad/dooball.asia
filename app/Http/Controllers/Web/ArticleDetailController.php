@@ -166,7 +166,7 @@ class ArticleDetailController extends Controller
                 'widget' => $widget,
                 'social' => $social,
                 'matchDatas' => $matchDatas);
-
+                dd($datas);
             return view('frontend/page', $datas);
         }
 
