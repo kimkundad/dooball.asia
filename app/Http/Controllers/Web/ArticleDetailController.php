@@ -113,7 +113,7 @@ class ArticleDetailController extends Controller
               //  dd($matchDatas);
             } else {
                 $article = $this->article->articleDetail($slug);
-                dd($article)
+                dd($article);
                 if ((int) $article->id > 0) {
                     $isArticle = true;
 
