@@ -215,7 +215,7 @@
 
                 @if($matchDatas['val_ch'] == 1)
                 <div class="hero-inner">
-                    <div class="db-collapse">
+                    <div class="dd_new db-collapse">
                         <div class="my_text_w db-match match-0 teee">
                           <span class="match-time1">วันเวลา</span>
                           <span class="home-team1">ทีมเหย้า</span>
@@ -227,7 +227,7 @@
                     @if($matchDatas)
                         @if ($matchDatas['total2'] > 0)
                             @foreach($matchDatas['all_match'] as $k => $val)
-
+                                @if($matchDatas['team_name'] != $val->home_team && $matchDatas['team_name'] != $val->away_team)
                                 <div class="db-collapse border_match">
                                     <div class="db-match match-{{ ($k+100) }}">
                                       <?php $pieces = explode(",", $val->match_time); ?>
@@ -250,6 +250,7 @@
                                         @endif
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
 
                         @else
@@ -287,6 +288,15 @@
                 $('.content-' + index).slideToggle('medium');
             });
         });
+
+        $('.dd_new').each(function(index) {
+            // console.log( index + ": " + $( this ).text() );
+            $('.match-' + index).click(function(){
+                $('.content-' + index).slideToggle('medium');
+            });
+        });
+
+
     });
   </script>
 @stop
