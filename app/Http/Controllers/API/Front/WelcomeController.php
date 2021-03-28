@@ -186,7 +186,7 @@ class WelcomeController extends Controller
                 if($total5 > 0){
                   foreach ($all7 as $all77) {
 
-                    $l_m_name = $val->match_name;
+                    $l_m_name = $all77->match_name;
 
                   }
                 }
